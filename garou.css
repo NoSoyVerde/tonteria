@@ -1,0 +1,167 @@
+/* Reset y fuentes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+    color: #f5f5f5;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Animación de fade-in para secciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+header {
+    background: radial-gradient(circle, #222 0%, #111 100%);
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 3px solid #e63946;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+header h1 {
+    color: #e63946;
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px #000;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #e63946;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #e63946;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+/* Perfil */
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.profile img {
+    max-width: 300px;
+    border-radius: 15px;
+    border: 4px solid #e63946;
+    transition: transform 0.5s;
+}
+
+.profile img:hover {
+    transform: scale(1.05) rotate(-3deg);
+    box-shadow: 0 0 30px #e63946;
+}
+
+.profile-text {
+    flex: 1;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.profile-text h2 {
+    color: #e63946;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 8px #000;
+}
+
+/* Habilidades y Historia */
+.abilities, .story {
+    margin-top: 3rem;
+    animation: fadeInUp 1.7s ease-out forwards;
+}
+
+h3 {
+    color: #e63946;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-shadow: 1px 1px 5px #000;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+ul li:hover {
+    color: #e63946;
+    transform: translateX(10px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: radial-gradient(circle, #111 0%, #222 100%);
+    margin-top: 4rem;
+    border-top: 3px solid #e63946;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+footer p {
+    color: #f5f5f5;
+}
+
+/* Responsivo */
+@media(max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-text h2 {
+        margin-top: 1rem;
+    }
+}
